@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Основа — варианты сайта</title>
+  <link rel="icon" href="v1/assets/img/favicon.svg" type="image/svg+xml">
+  <style>
+    @font-face {
+      font-family: "Inter Tight";
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("v1/assets/fonts/inter-tight-cyrillic-wght-normal.woff2") format("woff2");
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    @font-face {
+      font-family: "Inter Tight";
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("v1/assets/fonts/inter-tight-latin-wght-normal.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+2000-206F;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #171719;
+      background: #fafaf9;
+      font-family: "Inter Tight", Arial, sans-serif;
+    }
+    .page { max-width: 82rem; margin-inline: auto; padding: 0 clamp(1rem, 5vw, 4rem) 3rem; }
+    header {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      padding-block: 1.3rem;
+      border-bottom: 1px solid #cbcbc9;
+      font-weight: 750;
+      font-size: 1.7rem;
+      letter-spacing: -.055em;
+    }
+    h1 {
+      margin: clamp(2rem, 6vw, 5rem) 0 clamp(1.5rem, 3vw, 2.75rem);
+      font-size: clamp(2.6rem, 6.5vw, 5.75rem);
+      line-height: 1;
+      letter-spacing: -.055em;
+      font-weight: 650;
+    }
+    nav { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 3vw, 2.75rem); }
+    .option { display: block; min-width: 0; color: inherit; text-decoration: none; }
+    .option:focus-visible { outline: 3px solid #ac380a; outline-offset: 5px; }
+    .preview { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+    .caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .75rem;
+      padding: .85rem 0 1.05rem;
+      border-bottom: 1px solid #bcbcb9;
+    }
+    .name { font-size: clamp(1.5rem, 2.8vw, 2.35rem); font-weight: 600; letter-spacing: -.035em; }
+    .open { font-weight: 550; color: #953408; text-decoration: underline; text-underline-offset: .23em; }
+    .option:hover .caption, .option:focus-visible .caption { border-color: #ac380a; }
+    .option:hover .open { text-decoration-thickness: 2px; }
+    @media (max-width: 42rem) {
+      nav { grid-template-columns: 1fr; gap: 1.6rem; }
+      header { padding-block: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header><img src="v1/assets/img/favicon.svg" alt="" width="32" height="32">основа</header>
+    <main>
+      <h1>Варианты сайта</h1>
+      <nav aria-label="Выбор варианта сайта">
+        <a class="option" href="./v1/">
+          <img class="preview" src="v1/assets/img/type-school.jpg" width="1024" height="1024" alt="">
+          <span class="caption"><span class="name">Вариант 1</span><span class="open">Открыть</span></span>
+        </a>
+        <a class="option" href="./v2/">
+          <img class="preview" src="v2/assets/img/dark-school.jpg" width="1280" height="960" alt="">
+          <span class="caption"><span class="name">Вариант 2</span><span class="open">Открыть</span></span>
+        </a>
+      </nav>
+    </main>
+  </div>
+</body>
+</html>
